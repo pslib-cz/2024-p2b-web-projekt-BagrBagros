@@ -1,25 +1,450 @@
-@import "normalize.css";
-@import "typography.css";
-
-:root {
-  color-scheme: light dark;
-
-  color: light-dark(#213547, rgba(255, 255, 255, 0.87));
-  background-color: light-dark(#f9f9f9, #242424);
-  --color-primary: light-dark(#747bff, #646cff);
-  --color-mod: #535bf2;
+h1, p, body, h2, ul{
+  margin: 0;
+  padding: 0;
 }
-
-body {
+p, h1, h2{
+  color: rgb(0, 0, 0);
+}
+a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+nav{
+  display: none;
+}
+.home__header{
+  padding-top: 1.25em;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-around;
+}
+.hamburger .hamburger__line{
+  width: 3.75em;
+  height: .6em;
+  background-color: #000000;
+  margin-top: .4em;
+  border-radius: 15px;
+}
+.home__image img{
+  width: 100%;
+  height: auto;
+  transform: translate(-1em 0)
+}
+.home{
+  background: linear-gradient(180deg, #ff0000 10%, #ff0000 90%);
+}
+.fa-arrow-down{
+  color: white;
+  font-size: 2em;
+}
+.home__sipka{
+  text-align: center;
 }
 
-.app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.tlacitko__zjistitVice{
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  border: solid 1px rgb(43, 38, 38);
+  box-shadow: 1px -1px 10px rgb(43, 38, 38);
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #7FB0E5;
+}
+.tlacitko__center{
   text-align: center;
+  translate: 0 50%;
+}
+.oProduktu{
+  position: relative;
+  z-index: -1;
+  background: linear-gradient(180deg, #504f4f 16.18%, #6AFFDA 51.77%);
+}
+.oProduktu__image img{
+  width: 100%;
+  height: auto;
+}
+.oProduktu__image{
+  padding-top: 2.8em;
+}
+.oProduktu h2{
+  position: absolute;
+  font-size: 2.6em;
+  font-weight: 700;
+  letter-spacing: 0.84px;
+  top: .9em;
+  left: 0.7em;
+}
+.oProduktu p{
+  color: black;
+  width: 80%;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.oProduktu__text{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.oProduktu .home__sipka i{
+  padding-bottom: 1em;
+  color: black;
+}
+
+
+.porovnani{
+  padding: 1em;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #000000;
+  background: linear-gradient(129deg, #7FB0E5 38.84%, #6AFFB7 65.68%);
+  box-shadow: 0px 4px 5px 5px rgba(121, 119, 119, 0.25) inset;
+  overflow: hidden;
+}
+.rightside::before{
+  content: "";
+  position: absolute;
+  top: -8%;
+  right: 50%;
+  height: 116%;
+  width: 3px;
+  background: black;
+  transform: rotate(30deg);
+}
+.VS{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  color: white;
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+.porovnani img{
+  width: 100%;
+  height: auto;
+}
+.rightside img{
+  margin-top: 7em;
+  translate: 3em;
+}
+.leftside img{
+  translate: -4em;
+}
+.relative__porovnani{
+  position: relative;
+}
+.rightside p{
+  color: #59A8FF;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 25px; /* 62.5% */
+  letter-spacing: 2px;
+}
+.leftside p{
+  position: absolute;
+  color: #2DFF9A;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 34px; /* 85% */
+  letter-spacing: 2px;
+  top: 5%;
+  left: 60%;
+}
+
+
+
+@media (min-width: 600px) {
+  .porovnani{
+    justify-content: center;
+    gap: 10em;
+  }
+  .leftside img, .rightside img{
+    translate: 0;
+  }
+  .leftside p{
+    left: 80%;
+  }
+}
+
+
+
+
+
+
+
+.kontakty p, .kontakty h2{
+  color: black;
+}
+.kontakty h2{
+  font-size: 2em;
+  font-weight: 700;
+  padding: .7em 0 .6em .9em;
+}
+.kontakt__flex{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em;
+}
+.kontakty__soc_site{
+  display: flex;
+  gap: 1.1em;
+  justify-content: center;
+  font: 100 3em "Inika";
+  margin-bottom: .8em;
+}
+.kontakty{
+  border-top: 1px solid #797777;
+  border-bottom: 2px solid #797777;
+  background: linear-gradient(114deg, #FFF 0%, #D7D4D4 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25) inset;
+}
+footer{
+  background: #212121;
+}
+footer p{
+  padding: 2em;
+  text-align: center;
+}
+
+
+
+  .zarovnani{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+
+
+@media (min-width: 768px) {
+  span{
+  display: inline-block;
+}
+
+
+
+  .home__nadpis h1{
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+  }
+  .home__nadpis p{
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+  }
+  nav{
+    display: block;
+  }
+  ul{
+    display: flex;
+    gap: 2em; 
+    list-style: none;
+    color: white;
+    padding: 1.6em;
+    font-size: 1.25em;
+  }
+  .hamburger{
+    display: none;
+  }
+  .desktop__flex{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+
+  }
+  .home__nadpis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+  }
+  .oProduktu__flex{
+    display: flex;
+    align-items: center;
+  }
+  .oProduktu .home__sipka i{
+    display: none;
+  }
+  .oProduktu{
+    background: linear-gradient(97deg, #504F4F 16.18%, #6AFFDA 51.77%);
+  }
+  
+
+
+
+  .kontakty{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+  .kontakt__flex{
+    justify-content: center;
+  }
+  .kontakt__flex::before{
+    content: "";
+    position: absolute;
+    height: 60%;
+    width: 1px;
+    left: 58%;
+    background: black;
+  }
+}
+.mobile-menu a {
+  color: rgb(255, 255, 255);
+  position: relative; /* Nutné pro ::before */
+  text-align: center;
+  color: #FFF;
+  font-size: 2em;
+  font-weight: 400;
+  padding: .5em 0 .5em 0;
+}
+
+.mobile-menu a:nth-child(n+2)::before {
+  content: "";
+  position: absolute;
+  top: 0; /* nebo jinak podle potřeby */
+  left: 0;
+  width: 100%;
+  height: 1.7px;
+  background-color: rgb(144, 144, 144); /* Nebo jakoukoli barvu chceš */
+  z-index: 10;
+}
+.home__image {
+  position: relative;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 5em; /* pod header */
+}
+.classic__home.active{
+  opacity: 40%;
+}
+.line1, .line2, .line3{
+  transition: 0.5s all;
+  transform: rotate(0deg);
+}
+.mobile-menu.active {
+  display: flex;
+}
+.line1.active{
+  transform: rotate(45deg);
+  transition: 0.5s all;
+  translate: 0 100%;
+}
+
+.line2.active{
+  display: none;
+  transition: 0.5s all;
+}
+
+.line3.active{
+  transform: rotate(-45deg);
+  transition: 0.5s all;
+  translate: 0 -70%;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+.swiper-wrapper{
+  margin-bottom: 2em;
+}
+.swiper p{
+  color: #000;
+}
+.swiper-slide{
+  border-radius: 8px;
+  background: linear-gradient(131deg, #FFF 0%, #999 100%);
+}
+.padding{
+  padding: 1em;
+}
+.recenze{
+  background: linear-gradient(127deg, #D7D4D4 0%, #FFF 100%);
+
+}
+.recenze h2{
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 140%; /* 44.8px */
+  padding: .5em;
+}
+.title{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%; /* 33.6px */
+}
+.review_body{
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.swiper .name{
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+}
+.swiper .date{
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.flex{
+  display: flex;
+  gap: 1em;
+  
+}
+.swiper img{
+  width: 100%;
+  height: auto;
+    border-radius: 50px;
+}
+.review__img{
+  width: 25%;
+  height: auto;
+}
+.infoUltra p, .infoUltra h2{
+  color: #000;
+}
+
+
+.infoUltra h2{
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 34px; /* 70.833% */
+  letter-spacing: 2px;
+  padding: 1em;
+}
+.infoUltra img{
+  width: 90%;
+  height: auto;
+}
+.infoUltra .image{
+  text-align: center;
+}
+.cena{
+  position: relative;
 }

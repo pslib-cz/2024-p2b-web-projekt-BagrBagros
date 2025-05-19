@@ -1,141 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bergr Arts</title>
-  </head>
-  <body>
-    <div class="app">
-      <nav>
-        <ul>
-          <a href=""><li>O mně</li></a>
-          <a href=""><li>Obchod</li></a>
-          <a href=""><li>Kontakt</li></a>
-          <a href=""><li>Košík</li></a>
-        </ul>
-      </nav>
-      <div class="desktop__flex">
-        <div class="home__header">
-          <div class="home__nadpis">
-            <h1>Vítejte na Bergr Arts</h1>
-            <p>Prodávám své umění a vytvářím obrazy na<br>
-               zakázku, cena je sice dána, avšak jsem otevřený<br>
-               k domluvě.</p>
-          </div>
-          <div class="home__header">
-            <img src="%BASE_URL%../public/images/Podpis.PNG" alt="Podpis" class="classic__home" />  
-          </div>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bergr Arts</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/src/styles/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">O mně</a>
+      <a href="#">Obchod</a>
+      <a href="#">Zakázky</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Vítejte na Bergr Arts</h1>
+      <p>Prodávám své umění a vytvářím obrazy na zakázku, cenu si sice dám, avšak jsem otevřený k domluvě.</p>
+      <img src="%BASE_URL%../public/images/Podpis.PNG" alt="Podpis" class="signature" />
+    </section>
+
+    <section class="top-sellers">
+      <h2>Nejvíce prodávané</h2>
+      <div class="grid">
+        <div class="item">
+          <img src="%BASE_URL%../public/images/O-Bratři.PNG" alt="Bratři v Železém" />
+          <p><strong>Bratři v Železém</strong><br>2 000 Kč • 60×60 cm</p>
+        </div>
+        <div class="item">
+          <img src="%BASE_URL%../public/images/O-Obličej.PNG" alt="Maska dimenzí" />
+          <p><strong>Maska dimenzí</strong><br>2 000 Kč • 60×60 cm</p>
+        </div>
+        <div class="item">
+          <img src="%BASE_URL%../public/images/O-Město.PNG" alt="Město barev" />
+          <p><strong>Město barev</strong><br>3 000 Kč • 60×60 cm</p>
         </div>
       </div>
-      <h2>Nejvíce Prodávané</h2>
-          <img src="%BASE_URL%../public/images/O-Bratři.PNG" alt="Bratři" class="classic__home" />
-          <img src="%BASE_URL%../public/images/O-Obličej.PNG" alt="Obličej" class="classic__home" />
-          <img src="%BASE_URL%../public/images/O-Město.PNG" alt="Město" class="classic__home" />
-          </div>
-          <div>
-            <p>Bratři v železném - 2 500kč</p>
-            <p>Prodávám své umění a vytvářím obrazy na<br>
-            zakázku, cena je sice dána, avšak jsem otevřený<br>
-            k domluvě.</p>
-            <p>Prodávám své umění a vytvářím obrazy na<br>
-            zakázku, cena je sice dána, avšak jsem otevřený<br>
-            k domluvě.</p>
-          </div>
+    </section>
 
-      <div class="home__sipka">
-        <i class="fas fa-arrow-down"></i>
-      </div>
-    </div>
-    <div class="oProduktu">
+    <section class="upcoming-projects">
       <h2>Nadcházející projekty</h2>
-      <div class="desktop__flex">
-        <div class="oProduktu__image">
-          <img src="%BASE_URL%../oproduktuImage.png" alt="" />
-        </div>
-        <div class="oProduktu__flex">
-          <div class="oProduktu__text">
-            <p>Výstava v Libereckém domu kultury - 28. 6. 2025<br><br><span>Nová kolekce "Divoké krajiny" vychází již brzy k prodeji!</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="home__sipka">
-        <i class="fas fa-arrow-down"></i>
-      </div>
-      <div class="tlacitko__center">
-        <div class="tlacitko__zjistitVice"><p>Další</p></div>
-      </div>
-    </div>
+      <p><strong>Tanec barev</strong><br>Výstava v libereckém domu kultury – 2.-6. 8. 2025</p>
+      <p><strong>Kolekce divoké krajiny</strong><br>Již brzy vychází sbírka obrazů za 3600 (4 kusy)</p>
+      <img src="%BASE_URL%../public/images/O-Pole.PNG" alt="Nadcházející projekt" />
+      <button>Další</button>
+    </section>
 
-    <div class="home__header">
-      <h2>Druhy zakázek</h2>  
-    </div>
-  </div>
-</div>
-</div>
-    <img src="%BASE_URL%../public/images/O-Robot.PNG" alt="Robot" class="classic__home" />
-    <img src="%BASE_URL%../public/images/O-Itálie.PNG" alt="Itálie" class="classic__home" />
-    <img src="%BASE_URL%../public/images/O-Muž.PNG" alt="Muž" class="classic__home" />
+    <section class="order-types">
+      <h2>Druhy zakázek</h2>
+      <div class="grid">
+        <div class="item">
+          <img src="%BASE_URL%../public/images/O-Robot.PNG" alt="Original Character" />
+          <p><strong>Original Character</strong><br>Má někdo postavu? Pošli mi návrh a popis!</p>
+        </div>
+        <div class="item">
+          <img src="%BASE_URL%../public/images/O-Muž.PNG" alt="Portrét" />
+          <p><strong>Portrét</strong><br>Pošli fotku (nebo popis), vše zařídím.</p>
+        </div>
+        <div class="item">
+          <img src="%BASE_URL%../public/images/O-Itálie.PNG" alt="Místa" />
+          <p><strong>Místa</strong><br>Pošli fotku místa nebo mi napiš, co máš na mysli.</p>
+        </div>
+      </div>
+      <button>Na zakázky</button>
+    </section>
 
-    <div class="recenze">
+    <section>
       <h2>Spokojení zákazníci</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="padding">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <p class="title">Můj synu</p>
-              <p class="review_body">Moc hezké obrázky</p>
-              <div class="flex">
-                <div class="review__img">
-                  <img src="%BASE_URL%../review.png" alt="" />
-                </div>
-                <div>
-                  <p class="name">Moje mamča</p>
-                  <p class="date">28. 2. 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="padding">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <p class="title">Pošta!</p>
-              <p class="review_body">Pošta to zničila jako Tary figurku</p>
-              <div class="flex">
-                <div class="review__img">
-                  <img src="%BASE_URL%../review.png" alt="" />
-                </div>
-                <div>
-                  <p class="name">Anonymous</p>
-                  <p class="date">5. 5. 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="grid">
+        <div class="review-box">
+          <div class="avatar">👤</div>
+          <strong>Moje mamča</strong>
+          <p>Díky mami :D<br><em>"Hezký obrázek!"</em></p>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
+        <div class="review-box">
+          <div class="avatar">👤</div>
+          <strong>Anonymous</strong>
+          <p>Kupec originálů<br><em>"Pošlu to zítra jako Tary figurku"</em></p>
+        </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <footer>
-      <p>© 2025 BergrArts – Všechna práva vyhrazena.</p>
-    </footer>
-    
-    <div id="app"></div>
-    <script type="module" src="/src/scripts/main.js"></script>  
-  </body>
+  <footer>
+    <div class="bottom-links">
+      <div>BergrArts.cz</div>
+      <div>Sponzoři:<br>Nemam ):<br>Nic<br>Chybí</div>
+    </div>
+  </footer>
+</body>
 </html>

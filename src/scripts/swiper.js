@@ -1,28 +1,41 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
+import 'swiper/swiper-bundle.css';
+ 
+// init Swiper:
 const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Scrollbar],
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-    },
     loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: true,
-    },  
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination, Scrollbar],
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    1024: {
+        slidesPerView: 4,
+        grid: {
+          columns: 4,
+        },
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+     },
+  },
 });

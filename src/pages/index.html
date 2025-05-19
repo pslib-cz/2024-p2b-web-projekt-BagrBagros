@@ -25,22 +25,35 @@
     </section>
 
     <section class="top-sellers">
-      <h2>Nejvíce prodávané</h2>
-      <div class="grid">
-        <div class="item">
-          <img src="%BASE_URL%../public/images/O-Bratři.PNG" alt="Bratři v Železém" />
-          <p><strong>Bratři v Železém</strong><br>2 000 Kč • 60×60 cm</p>
-        </div>
-        <div class="item">
-          <img src="%BASE_URL%../public/images/O-Obličej.PNG" alt="Maska dimenzí" />
-          <p><strong>Maska dimenzí</strong><br>2 000 Kč • 60×60 cm</p>
-        </div>
-        <div class="item">
-          <img src="%BASE_URL%../public/images/O-Město.PNG" alt="Město barev" />
-          <p><strong>Město barev</strong><br>3 000 Kč • 60×60 cm</p>
-        </div>
+  <h2>Nejvíce prodávané</h2>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide item">
+        <img src="%BASE_URL%../public/images/O-Bratři.PNG" alt="Bratři" />
+        <p>Bratři v Železém <br><em>2 000 Kč • 60×60 cm</em></p>
       </div>
-    </section>
+      <div class="swiper-slide item">
+        <img src="%BASE_URL%../public/images/O-Obličej.PNG" alt="Obraz 2" />
+        <p>Maska dimenzí <br><em>2 000 Kč • 60×60 cm</em></p>
+      </div>
+      <div class="swiper-slide item">
+        <img src="%BASE_URL%../public/images/O-Město.PNG" alt="Obraz 3" />
+        <p>Město barev <br><em>3 000 Kč • 60×60 cm</em></p>
+      </div>
+    </div>
+
+    <!-- Navigace -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
 
     <section class="upcoming-projects">
   <div class="upcoming-wrapper">
@@ -88,7 +101,7 @@
         <div class="review-box">
           <div class="avatar">👤</div>
           <strong>Anonymous</strong>
-          <p>Kupec originálů<br><em>"Pošlu to zítra jako Tary figurku"</em></p>
+          <p>Kupec originálů<br><em>"Pošta to zničila jako Tary figurku"</em></p>
         </div>
       </div>
     </section>

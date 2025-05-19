@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bergr Arts</title>
   <link rel="icon" type="image/svg+xml" href="/2024-p2b-web-projekt-BagrBagros/vite.svg" />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- Tvoje CSS -->
   <link rel="stylesheet" crossorigin href="/2024-p2b-web-projekt-BagrBagros/assets/style-BoG9dMSq.css">
 </head>
 <body>
@@ -41,6 +49,7 @@
             <p>Město barev <br><em>3 000 Kč • 60×60 cm</em></p>
           </div>
         </div>
+
         <div class="swiper-navigation">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -71,18 +80,19 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide item">
-            <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-Robot-DnvuAyyp.PNG" alt="Robot" />
+            <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-Robot-DnvuAyyp.PNG" alt="Bratři" />
             <p>Original Character <br><em>Má někdo postavu? Pošli mi návrh a popis!</em></p>
           </div>
           <div class="swiper-slide item">
-            <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-Mu%C5%BE-7sIKuDdd.PNG" alt="Portrét" />
+            <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-Mu%C5%BE-7sIKuDdd.PNG" alt="Obraz 2" />
             <p>Portrét <br><em>Pošli fotku (nebo popis), vše zařídím.</em></p>
           </div>
           <div class="swiper-slide item">
-            <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-It%C3%A1lie-CMe5nrej.PNG" alt="Místa" />
+            <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-It%C3%A1lie-CMe5nrej.PNG" alt="Obraz 3" />
             <p>Místa <br><em>Pošli fotku místa nebo mi napiš, co máš na mysli.</em></p>
           </div>
         </div>
+
         <div class="swiper-navigation">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -90,8 +100,8 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-scrollbar"></div>
       </div>
-      <div class="upcoming-button" style="text-align: center; margin-top: 1rem;">
-        <a href="./contacts/Kontakty.html" class="button">Na zakázky</a>
+      <div class="center-button">
+        <a class="main-button" href="./contacts/Kontakty.html">Na zakázky</a>
       </div>
     </section>
 
@@ -118,5 +128,40 @@
       <div>Sponzoři:<br>Nemam<br>Nic<br>Chybí</div>
     </div>
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.swiper').forEach((swiperContainer) => {
+      new Swiper(swiperContainer, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: swiperContainer.querySelector('.swiper-button-next'),
+          prevEl: swiperContainer.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+          el: swiperContainer.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        scrollbar: {
+          el: swiperContainer.querySelector('.swiper-scrollbar'),
+          draggable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    });
+  </script>
 </body>
 </html>

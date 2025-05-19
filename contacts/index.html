@@ -1,42 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/2024-p2b-web-projekt-BagrBagros/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts | Example Page</title>
-  <script type="module" crossorigin src="/2024-p2b-web-projekt-BagrBagros/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <script type="module" crossorigin src="/2024-p2b-web-projekt-BagrBagros/assets/hamburger-DzGNCfwF.js"></script>
-  <script type="module" crossorigin src="/2024-p2b-web-projekt-BagrBagros/assets/main-Bgzv3cQd.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obchod – Bergr Arts</title>
+  <link rel="icon" type="image/svg+xml" href="/2024-p2b-web-projekt-BagrBagros/vite.svg" />
   <link rel="stylesheet" crossorigin href="/2024-p2b-web-projekt-BagrBagros/assets/style-CxzrxcCQ.css">
 </head>
 <body>
-    <div class="app">
-        <h1>Contacts</h1>
-        <p>This is the contacts page.</p>
-        <p><a href="../">homepage link</a></p>
-        <p><a href="/2024-p2b-web-projekt-BagrBagros/">homepage link <img src="/2024-p2b-web-projekt-BagrBagros/vite.svg"></a></p>
+<main>
+  <section>
+    <h2>O mně</h2>
+    <p>Ahoj!<br>
+    Jmenuji se Miroslav Bergr a jsem student Průmyslovky Liberec, kde studuji IT kyber-bezpečnost a hardware.</p>
+
+    <p>Narodil jsem se 28. 02. 2008 a jsem rodák z Libereckého kraje, malování a kreslení mě vždy bavilo a začal jsem tvořit. 
+    Nyní jsem dostal úkol si vytvořit stránku, a jakým způsobem si vytvořit stránku, než o tom co vás baví? Tak pište, volejte, kupujte!</p>
+
+    <p><em>(nechci umřít na hlad prosím)</em></p>
+
+    <div style="text-align: center; margin: 1rem 0;">
+      <img src="/2024-p2b-web-projekt-BagrBagros/assets/O-OMn%C4%9B-C4xHu54P.PNG" alt="Profilový obrázek" style="border-radius: 50%; width: 200px; height: auto;">
     </div>
-    <div class="kontakty">
-        <div>
-          <h2>Kontaktuj nás</h2>
-          <div class="kontakty__soc_site">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
+  </section>
+
+  <section>
+    <h2>Kontaktní formulář</h2>
+    <form action="#" method="post">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <div style="flex: 1; min-width: 200px;">
+          <label for="jmeno">Jméno</label><br>
+          <input type="text" id="jmeno" name="jmeno" placeholder="Např. Tomáš" style="width: 100%; padding: 0.5rem;">
         </div>
-  
-        <div class="kontakt__flex">
-          <div class="zarovnani">
-            <i class="fas fa-phone"></i>
-            <p>+420 123 456 789</p>
-          </div>
-          <div class="zarovnani">
-            <i class="fas fa-envelope"></i>
-            <p>info@sentinelvision.cz</p>
-          </div>
+        <div style="flex: 1; min-width: 200px;">
+          <label for="prijmeni">Příjmení</label><br>
+          <input type="text" id="prijmeni" name="prijmeni" placeholder="Např. Jedno" style="width: 100%; padding: 0.5rem;">
+        </div>
+        <div style="flex: 1; min-width: 200px;">
+          <label for="profil">Profilový obrázek</label><br>
+          <img src="/2024-p2b-web-projekt-BagrBagros/assets/P-Otazn%C3%ADk-7fUeVPcx.PNG" alt="Profilový obrázek" style="border-radius: 50%; width: 200px; height: auto;">
         </div>
       </div>
+
+      <br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="email@doména.net" style="width: 100%; padding: 0.5rem;">
+
+      <br><br>
+
+      <label for="zprava">Zpráva</label><br>
+      <textarea id="zprava" name="zprava" rows="4" placeholder="Ahoj mám zájem o..." style="width: 100%; padding: 0.5rem;"></textarea>
+
+      <br><br>
+
+      <button type="submit">Hotovo</button>
+    </form>
+  </section>
+
+  <hr style="margin: 2rem 0; border: none; border-top: 2px solid #0fa9a9;">
+
+  <section>
+    <h2>Kontakt</h2>
+    <div class="review-box">
+      <strong>Tel. číslo:</strong> +420 732 597 459<br>
+      <strong>e-mail:</strong> miroslav.bergr.023@pslib.cz<br>
+      <strong>adresa studia:</strong> Praha 1, Shrekova bažina 13
+    </div>
+  </section>
+</main>
+<footer>
+    <div class="bottom-links">
+      <div>BergrArts.cz</div>
+      <div>Sponzoři:<br>Nemam<br>Nic<br>Chybí</div>
+    </div>
+  </footer>
 </body>
 </html>

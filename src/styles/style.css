@@ -21,19 +21,25 @@ header h1 {
 
 nav {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  max-width: 600px;
+  margin: 0 auto;
   margin-top: 0.5rem;
 }
 
 nav a {
   background-color: #0fa9a9;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 999px;
   color: black;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  width: 120px;
+  text-align: center;
   transition: 0.2s;
 }
 
@@ -125,6 +131,7 @@ footer .bottom-links {
   margin: 0.5rem;
   text-align: center;
   font-size: 0.9rem;
+  width: 180px;
 }
 
 .review-box strong {
@@ -132,32 +139,29 @@ footer .bottom-links {
   margin-bottom: 0.5rem;
 }
 
+.review-box .avatar {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 700px) {
   .item {
     width: calc(50% - 1rem);
   }
-  
+
   nav {
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    width: auto;
+    min-width: 100px;
+    margin-bottom: 0.5rem;
   }
 
   .bottom-links {
     flex-direction: column;
     align-items: center;
   }
-}
-.review-box {
-  background-color: #fff;
-  border: 2px dashed #FCB870;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 0.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  width: 180px;
-}
-
-.review-box .avatar {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
 }

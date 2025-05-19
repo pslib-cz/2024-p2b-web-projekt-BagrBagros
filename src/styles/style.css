@@ -63,7 +63,32 @@ main {
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
 
+.item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
 /* Produkty */
 .products {
   display: flex;

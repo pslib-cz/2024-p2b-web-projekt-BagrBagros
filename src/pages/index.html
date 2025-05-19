@@ -7,9 +7,12 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
 
-  <!-- Vlastní styl -->
+  <!-- Tvoje CSS -->
   <link rel="stylesheet" href="/src/styles/style.css" />
 </head>
 <body>
@@ -29,7 +32,6 @@
       <img src="%BASE_URL%../public/images/Podpis.PNG" alt="Podpis" class="signature" />
     </section>
 
-    <!-- Nejvíce prodávané -->
     <section class="top-sellers">
       <h2>Nejvíce prodávané</h2>
       <div class="swiper">
@@ -57,7 +59,6 @@
       </div>
     </section>
 
-    <!-- Nadcházející projekty -->
     <section class="upcoming-projects">
       <div class="upcoming-wrapper">
         <div class="upcoming-text">
@@ -74,21 +75,20 @@
       </div>
     </section>
 
-    <!-- Druhy zakázek -->
     <section class="order-types">
       <h2>Druhy zakázek</h2>
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide item">
-            <img src="%BASE_URL%../public/images/O-Robot.PNG" alt="Robot" />
+            <img src="%BASE_URL%../public/images/O-Robot.PNG" alt="Bratři" />
             <p>Original Character <br><em>Má někdo postavu? Pošli mi návrh a popis!</em></p>
           </div>
           <div class="swiper-slide item">
-            <img src="%BASE_URL%../public/images/O-Muž.PNG" alt="Portrét" />
+            <img src="%BASE_URL%../public/images/O-Muž.PNG" alt="Obraz 2" />
             <p>Portrét <br><em>Pošli fotku (nebo popis), vše zařídím.</em></p>
           </div>
           <div class="swiper-slide item">
-            <img src="%BASE_URL%../public/images/O-Itálie.PNG" alt="Místa" />
+            <img src="%BASE_URL%../public/images/O-Itálie.PNG" alt="Obraz 3" />
             <p>Místa <br><em>Pošli fotku místa nebo mi napiš, co máš na mysli.</em></p>
           </div>
         </div>
@@ -100,14 +100,11 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-scrollbar"></div>
       </div>
-
-      <!-- tlačítko -->
-      <div class="order-button">
-        <a class="button" href="./contacts/Kontakty.html">Na zakázky</a>
+      <div class="center-button">
+        <a class="main-button" href="./contacts/Kontakty.html">Na zakázky</a>
       </div>
     </section>
 
-    <!-- Recenze -->
     <section>
       <h2>Spokojení zákazníci</h2>
       <div class="grid">
@@ -134,8 +131,37 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Vlastní Swiper inicializace -->
-  <script type="module" src="/src/scripts/swiper-init.js"></script>
+  <script>
+    document.querySelectorAll('.swiper').forEach((swiperContainer) => {
+      new Swiper(swiperContainer, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: swiperContainer.querySelector('.swiper-button-next'),
+          prevEl: swiperContainer.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+          el: swiperContainer.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        scrollbar: {
+          el: swiperContainer.querySelector('.swiper-scrollbar'),
+          draggable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    });
+  </script>
 </body>
 </html>

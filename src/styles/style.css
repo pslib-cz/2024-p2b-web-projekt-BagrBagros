@@ -1,3 +1,4 @@
+/* Základní styl */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Hlavička */
 header {
   background-color: #FCB870;
   color: black;
@@ -19,6 +21,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
+/* Navigace */
 nav {
   display: flex;
   justify-content: space-between;
@@ -44,62 +47,110 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #0c9090;
+  background-color: #0c8888;
 }
 
+/* Hlavní obsah */
 main {
   padding: 1rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
+.section-title {
   border-bottom: 2px solid #FCB870;
   padding-bottom: 0.25rem;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
-.grid {
+/* Produkty */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.product {
+  background: #fff;
+  border: 2px solid #FCB870;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: calc(33.333% - 2rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.product h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.product p {
+  margin: 0.2rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+.product button {
+  background-color: #0fa9a9;
+  color: black;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0.2rem;
+}
+
+.product button.secondary {
+  background-color: #e0e0e0;
+}
+
+.product button:hover {
+  background-color: #0c8888;
+}
+
+/* Postup objednávky */
+.order-process {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-}
-
-.item {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  gap: 1rem;
+  background-color: #fff;
+  border: 2px solid #FCB870;
+  border-radius: 1rem;
   padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.order-process .step {
   text-align: center;
-  width: 100%;
-  max-width: 280px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  padding: 1rem;
+  border: 1px dashed #0fa9a9;
+  border-radius: 1rem;
 }
 
-.item:hover {
-  transform: scale(1.02);
+.order-process .step .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-.item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.item p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #333;
-}
-
-button, .button {
+/* Tlačítka */
+button,
+.button {
   background-color: #0fa9a9;
   color: black;
   border: none;
@@ -112,10 +163,12 @@ button, .button {
   text-decoration: none;
 }
 
-button:hover, .button:hover {
-  background-color: #0c9090;
+button:hover,
+.button:hover {
+  background-color: #0c8888;
 }
 
+/* Footer */
 footer {
   background-color: #FCB870;
   color: black;
@@ -125,7 +178,7 @@ footer {
   border-top: 2px solid black;
 }
 
-footer .bottom-links {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -133,76 +186,23 @@ footer .bottom-links {
   margin-top: 0.5rem;
 }
 
-.review-box {
-  background-color: #ffffff;
-  border: 2px dashed #FCB870;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 0.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  width: 180px;
+footer .badge {
+  display: inline-block;
+  background-color: #0fa9a9;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  margin: 0.2rem;
+  font-weight: bold;
 }
 
-.review-box strong {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.review-box .avatar {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* --- ORDER PROCESS --- */
-.order-process {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  border: 3px dashed #FCB870;
-  border-radius: 16px;
-  padding: 2rem;
-  background-color: #fffaf4;
-  margin-top: 2rem;
-}
-
-.order-process .step {
-  background-color: #ffffff;
-  border: 2px solid #0fa9a9;
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.order-process .step:hover {
-  transform: scale(1.02);
-}
-
-.order-process .icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.order-process h3 {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-  color: #0fa9a9;
-}
-
-.order-process p {
-  font-size: 0.95rem;
-  color: #333;
-  margin: 0.5rem 0 0;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 700px) {
-  .item {
-    width: calc(50% - 1rem);
+/* Responzivita */
+@media (max-width: 900px) {
+  .product {
+    width: calc(50% - 2rem);
   }
+}
 
+@media (max-width: 600px) {
   nav {
     flex-wrap: wrap;
     justify-content: center;
@@ -214,13 +214,12 @@ footer .bottom-links {
     margin-bottom: 0.5rem;
   }
 
-  .bottom-links {
-    flex-direction: column;
-    align-items: center;
+  .product {
+    width: 100%;
   }
 
-  .order-process {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
 }

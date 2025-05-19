@@ -11,7 +11,7 @@ header {
   color: black;
   padding: 1rem;
   text-align: center;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #0fa9a9;
 }
 
 header h1 {
@@ -28,7 +28,7 @@ nav {
 }
 
 nav a {
-  background-color: #2DFF9A;
+  background-color: #0fa9a9;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   color: black;
@@ -38,7 +38,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #24d181;
+  background-color: #0fa9a9;
 }
 
 main {
@@ -68,7 +68,7 @@ h2 {
 .item {
   width: calc(33% - 1rem);
   min-width: 140px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   text-align: center;
 }
 
@@ -84,7 +84,7 @@ h2 {
 }
 
 button, .button {
-  background-color: #2DFF9A;
+  background-color: #0fa9a9;
   color: black;
   border: none;
   padding: 0.5rem 1rem;
@@ -97,7 +97,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  background-color: #24d181;
+  background-color: #0fa9a9;
 }
 
 footer {
@@ -118,7 +118,7 @@ footer .bottom-links {
 }
 
 .review-box {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 2px dashed #FCB870;
   padding: 1rem;
   border-radius: 1rem;

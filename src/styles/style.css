@@ -63,6 +63,7 @@ main {
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +90,7 @@ main {
   font-size: 1rem;
   color: #333;
 }
+
 /* Produkty */
 .products {
   display: flex;
@@ -248,6 +250,7 @@ footer .badge {
     align-items: center;
   }
 }
+
 .upcoming-projects {
   padding: 2rem;
 }
@@ -304,4 +307,95 @@ footer .badge {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
+}
+
+/* --- Swiper styly --- */
+
+/* Swiper container */
+.swiper {
+  width: 100%;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+/* Swiper slide - každý produkt */
+.swiper-slide {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
+
+/* Obrázky v slide */
+.swiper-slide img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+
+/* Popisky pod obrázkem */
+.swiper-slide p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+/* Navigační šipky Swiperu */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0fa9a9;
+  transition: color 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #fcb870;
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullet {
+  background: #0fa9a9;
+  opacity: 0.7;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fcb870;
+  opacity: 1;
+}
+
+/* Scrollbar styl */
+.swiper-scrollbar {
+  background: rgba(15, 169, 169, 0.15);
+  border-radius: 6px;
+  height: 6px;
+  margin-top: 1rem;
+}
+
+.swiper-scrollbar-drag {
+  background: #0fa9a9;
+  border-radius: 6px;
+}
+
+/* Responsivita */
+@media (min-width: 1024px) {
+  .swiper-slide {
+    max-width: 280px;
+  }
 }

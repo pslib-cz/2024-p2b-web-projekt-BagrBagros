@@ -44,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #0fa9a9;
+  background-color: #0c9090;
 }
 
 main {
@@ -103,7 +103,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  background-color: #0fa9a9;
+  background-color: #0c9090;
 }
 
 footer {
@@ -144,6 +144,50 @@ footer .bottom-links {
   margin-bottom: 0.5rem;
 }
 
+/* --- ORDER PROCESS --- */
+.order-process {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  border: 3px dashed #FCB870;
+  border-radius: 16px;
+  padding: 2rem;
+  background-color: #fffaf4;
+  margin-top: 2rem;
+}
+
+.order-process .step {
+  background-color: #ffffff;
+  border: 2px solid #0fa9a9;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.order-process .step:hover {
+  transform: scale(1.02);
+}
+
+.order-process .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.order-process h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #0fa9a9;
+}
+
+.order-process p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.5rem 0 0;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 700px) {
   .item {
     width: calc(50% - 1rem);
@@ -163,5 +207,10 @@ footer .bottom-links {
   .bottom-links {
     flex-direction: column;
     align-items: center;
+  }
+
+  .order-process {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 }

@@ -1,0 +1,90 @@
+/* === ZÁKLADNÍ SWIPER STYLY (pokud nechceš používat <link>) === */
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+
+/* === DODATEČNÉ ÚPRAVY === */
+
+.swiper {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.swiper-slide p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* === NAVIGAČNÍ ŠIPKY === */
+.swiper-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  width: 2rem;
+  height: 2rem;
+  background-color: #FCB870;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* === RESPONSIVNÍ TLAČÍTKO POD SWIPEREM === */
+.center-button {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.main-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #FCB870;
+  color: #0fa9a9;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+  background-color: #e4a95e;
+}
+
+/* === OPRAVY === */
+.swiper-scrollbar {
+  margin-top: 1rem;
+}

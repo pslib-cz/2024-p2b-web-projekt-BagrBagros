@@ -12,7 +12,7 @@
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
 
-  <!-- Tvoje CSS -->
+  <!-- Vlastní CSS -->
   <link rel="stylesheet" href="/src/styles/style.css" />
 </head>
 <body>
@@ -76,25 +76,25 @@
     </section>
 
     <section class="order-types">
-  <h2>Druhy zakázek</h2>
-  <div class="order-grid">
-    <div class="item">
-      <img src="%BASE_URL%../public/images/O-Robot.PNG" alt="Original Character" />
-      <p>Original Character <br><em>Má někdo postavu? Pošli mi návrh a popis!</em></p>
-    </div>
-    <div class="item">
-      <img src="%BASE_URL%../public/images/O-Muž.PNG" alt="Portrét" />
-      <p>Portrét <br><em>Pošli fotku (nebo popis), vše zařídím.</em></p>
-    </div>
-    <div class="item">
-      <img src="%BASE_URL%../public/images/O-Itálie.PNG" alt="Místa" />
-      <p>Místa <br><em>Pošli fotku místa nebo mi napiš, co máš na mysli.</em></p>
-    </div>
-  </div>
-  <div class="center-button">
-    <a class="main-button" href="./contacts/Kontakty.html">Na zakázky</a>
-  </div>
-</section>
+      <h2>Druhy zakázek</h2>
+      <div class="grid">
+        <div class="order-box">
+          <img src="%BASE_URL%../public/images/O-Robot.PNG" alt="Bratři" />
+          <p>Original Character <br><em>Má někdo postavu? Pošli mi návrh a popis!</em></p>
+        </div>
+        <div class="order-box">
+          <img src="%BASE_URL%../public/images/O-Muž.PNG" alt="Obraz 2" />
+          <p>Portrét <br><em>Pošli fotku (nebo popis), vše zařídím.</em></p>
+        </div>
+        <div class="order-box">
+          <img src="%BASE_URL%../public/images/O-Itálie.PNG" alt="Obraz 3" />
+          <p>Místa <br><em>Pošli fotku místa nebo mi napiš, co máš na mysli.</em></p>
+        </div>
+      </div>
+      <div class="center-button">
+        <a class="main-button" href="./contacts/Kontakty.html">Na zakázky</a>
+      </div>
+    </section>
 
     <section>
       <h2>Spokojení zákazníci</h2>
@@ -139,18 +139,7 @@
         scrollbar: {
           el: swiperContainer.querySelector('.swiper-scrollbar'),
           draggable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
+        }
       });
     });
   </script>

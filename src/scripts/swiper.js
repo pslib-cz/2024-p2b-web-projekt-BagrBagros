@@ -25,17 +25,5 @@ const swiper = new Swiper('.swiper', {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints: {
-    1024: {
-        slidesPerView: 4,
-        grid: {
-          columns: 4,
-        },
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-     },
-  },
+  
 });

@@ -10,7 +10,7 @@
 
 .swiper-wrapper {
   display: flex;
-  align-items: stretch;
+  justify-content: center;
 }
 
 .swiper-slide {
